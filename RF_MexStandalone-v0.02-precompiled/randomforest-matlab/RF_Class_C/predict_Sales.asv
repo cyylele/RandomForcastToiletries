@@ -41,11 +41,41 @@ for j=1:10
 end
 fprintf('\nnum_tree %d: Avg train time %d, test time %d\n',1000,total_train_time/100,total_test_time/100);
 predict_data=y_hat(2,:);
-[c1,c2]=sort(predict_data,'descend');
-c(1,:)=c2;
-c(2,:)=c1;
-% xlswrite('D:\smda\RF\RF_MexStandalone-v0.02-precompiled\randomforest-matlab\RF_Class_C\data\2016_12.xls',c2)
-xlswrite('D:\smda\RF\RF_MexStandalone-v0.02-precompiled\randomforest-matlab\RF_Class_C\data\2016_12.xlsx',c)
+[c1,c2]=sort(predict_data);
+% a=array(9);
+% for m=1:9
+%   if(c2(m)==1)
+%       a='洗发沐浴';
+%   end
+%    if(c2(m)==2)
+%       a='卫生巾/护垫/成人尿裤';
+%    end
+%    if(c2(m)==3)
+%       a='家私/皮具护理品';
+%    end
+%    if(c2(m)==4)
+%       a='香熏用品';
+%    end
+%    if(c2(m)==5)
+%       a='纸品/湿巾';
+%    end
+%    if(c2(m)==6)
+%       a='家庭环境清洁剂';
+%    end
+%    if(c2(m)==7)
+%       a='驱虫用品';
+%    end
+%    if(c2(m)==8)
+%       a='衣物清洁剂/护理剂';
+%    end
+%    if(c2(m)==9)
+%       a='室内除臭/芳香用品';
+%    end
+%   b(m)=a;
+% end
+c
+xlswrite('D:\smda\RF\RF_MexStandalone-v0.02-precompiled\randomforest-matlab\RF_Class_C\data\2016_12.xls',c2)
+xlswrite('D:\smda\RF\RF_MexStandalone-v0.02-precompiled\randomforest-matlab\RF_Class_C\data\2016_12.xls',c1)
 
 
 
