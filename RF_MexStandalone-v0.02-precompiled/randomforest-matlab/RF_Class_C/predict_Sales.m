@@ -28,11 +28,11 @@ for j=1:10
         % tic
         % operations
 	    tic;
-	    model=classRF_train(smp55(1:54,:),lebel55x9(1:54,i),1000);%右上角的‘表示的是矩阵的转置。
+	    model=classRF_train(smp55(1:55,:),lebel55x9(1:55,i),500);%右上角的‘表示的是矩阵的转置。
         total_train_time=toc; 
         toc
         tic;
-	    y_hat(:,i) = classRF_predict(smp55(55:55,:),model);
+	    y_hat(:,i) = classRF_predict(smp55(56:57,:),model);
 	    total_test_time=total_test_time+toc;	
         %length(x0)为数列的长度,即它里面有多少个元素.如果x0是矩阵的话,比方说M行N列,那么length返回M和N这两个数的最大值.
         %temp=length(find(y_hat~=label59))/length(label59);
