@@ -28,10 +28,10 @@ for i=1:10
 	fprintf('%d,',i);
     for j=1:9
 	    tic;
-	    model=regRF_train(smp55,lebel55x9(:,j),1000);
+	    model=regRF_train(smp55(1:55,:),lebel55x9(1:55,j),1000);
 	    total_train_time=toc;
 	    tic;
-	    y_hat(:,j) =regRF_predict(smp55,model);
+	    y_hat(:,j) =regRF_predict(smp55(56:57,:),model);
 	    total_test_time=total_test_time+toc;	
     end
 end
